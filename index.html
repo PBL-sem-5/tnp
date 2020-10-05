@@ -29,14 +29,16 @@
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <!-- <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> -->
-    <!-- <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- <link href="assets/vendor/venobox/venobox.css" rel="stylesheet"> -->
     <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
 
     <!-- Animate Css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -73,7 +75,8 @@
                 <div class="col-xl-9 d-flex align-items-center">
                     <h1 class="logo mr-auto"><a class="animate__backInDown my-element" href="index.html">TCET</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
-                    <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                    <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" -->
+                    <!-- class="img-fluid"></a> -->
 
                     <nav class="nav-menu d-none d-lg-block">
                         <ul>
@@ -186,10 +189,7 @@
 
                 <div class="section-title">
                     <h2>Events</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi
-                        quidem hic quas.</p>
+                    <p>Below Are The Events</p>
                 </div>
 
                 <div class="row">
@@ -206,7 +206,9 @@
                             </div>
                             <h4><a href="">Augmented Reality(AR)</a></h4>
                             <p>Virtual reality/Augmented Reality appears to offer educational potentials. Click
-                                here for this amazing event.</p>
+                                here for this amazing event.</p><br><br>
+                            <button type="button" class="btn btn-outline-success btn-lg"><i style="color:#622CDF"
+                                    class="fa fa-user-plus reg-icon" aria-hidden="true"></i>Register</button>
                         </div>
                     </div>
 
@@ -223,7 +225,9 @@
                             </div>
                             <h4><a href="">BlockChain</a></h4>
                             <p>Want to know how the "crytographical transaction" is being done? Register here for
-                                some insightful knowledge</p>
+                                some insightful knowledge</p><br><br>
+                            <button type="button" class="btn btn-outline-success btn-lg"><i style="color:#622CDF"
+                                    class="fa fa-user-plus reg-icon" aria-hidden="true"></i>Register</button>
                         </div>
                     </div>
 
@@ -239,7 +243,9 @@
                                 <i class="bx bx-tachometer"></i>
                             </div>
                             <h4><a href="">Machine Learning</a></h4>
-                            <p>One of the fastest and emerging technology by the top speakers in our panel.</p>
+                            <p>One of the fastest and emerging technology by the top speakers in our panel.</p><br><br>
+                            <button type="button" class="btn btn-outline-success btn-lg"><i style="color:#622CDF"
+                                    class="fa fa-user-plus reg-icon" aria-hidden="true"></i>Register</button>
                         </div>
                     </div>
 
@@ -298,12 +304,12 @@
         </section>
         <!-- End Services Section -->
 
-        <!-- ======= Features Section ======= -->
+        <!-- ======= Stats Section ======= -->
         <section id="features" class="features">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Features</h2>
+                    <h2>Stats</h2>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
                         sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
                         ea. Quia fugiat sit in iste officiis commodi
@@ -314,8 +320,46 @@
                     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column align-items-lg-center">
                         <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
                             <i class="bx bx-receipt"></i>
-                            <h4>Est labore ad</h4>
-                            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                            <canvas id="myChart" width="400" height="400"></canvas>
+                            <script>
+                                var ctx = document.getElementById('myChart').getContext('2d');
+                                var myChart = new Chart(ctx, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                        datasets: [{
+                                            label: '# of Votes',
+                                            data: [12, 19, 3, 5, 2, 3],
+                                            backgroundColor: [
+                                                'rgba(255, 99, 132, 0.2)',
+                                                'rgba(54, 162, 235, 0.2)',
+                                                'rgba(255, 206, 86, 0.2)',
+                                                'rgba(75, 192, 192, 0.2)',
+                                                'rgba(153, 102, 255, 0.2)',
+                                                'rgba(255, 159, 64, 0.2)'
+                                            ],
+                                            borderColor: [
+                                                'rgba(255, 99, 132, 1)',
+                                                'rgba(54, 162, 235, 1)',
+                                                'rgba(255, 206, 86, 1)',
+                                                'rgba(75, 192, 192, 1)',
+                                                'rgba(153, 102, 255, 1)',
+                                                'rgba(255, 159, 64, 1)'
+                                            ],
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    beginAtZero: true
+                                                }
+                                            }]
+                                        }
+                                    }
+                                });
+                            </script>
                         </div>
                         <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
                             <i class="bx bx-cube-alt"></i>
@@ -333,9 +377,9 @@
                             <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
                         </div>
                     </div>
-                    <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
+                    <!-- <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
                         <img src="assets/img/features.svg" alt="" class="img-fluid">
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -949,6 +993,9 @@
     <!-- <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> -->
     <!-- <script src="assets/vendor/venobox/venobox.min.js"></script> -->
     <!-- <script src="assets/vendor/aos/aos.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
     <!-- Template Main JS File -->
 
     <script src="assets/js/main.js"></script>
